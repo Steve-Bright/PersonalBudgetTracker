@@ -1,0 +1,37 @@
+#popUpDiv{
+    width: 380px;
+    height: 280px;
+    background-color: red;
+    /* background: linear-gradient(45deg, rgb(182, 244, 146), rgb(51, 139, 147));  */
+    margin: auto;
+    /* display: flex; */
+    display: none;
+    top: 300px;
+    position: fixed;
+    flex-direction: column;
+    border-style: solid;
+    backdrop-filter: blur(100px);
+}
+
+#popUpDiv > * {
+    margin: 20px auto 0px;
+}
+
+#popUpDiv > div:nth-child(1){
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#popUpDiv > input{
+    width: 70%;
+    height: 26px;
+    border-radius: 40px;
+    border: none;
+}
+
+#popUpDiv > button{
+    width: 90px;
+    height: 32px;
+    font-size: 15px;
+    border-radius: 30px;
+}

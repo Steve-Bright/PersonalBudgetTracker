@@ -19,8 +19,17 @@ const transactions = document.getElementById("recentTransactions");
 //budget[0] is history transactions
 //budget[1] is total budget.
 
+function popUp(){
+    console.log("Clicked")
+    const popUp = document.getElementById("popUpDiv");
+    if(popUp.style.display === "none"){
+        popUp.style.display = "flex";
+    }
+}
+
 
 onValue(budgetList, function(snapshot){
+    transactions.innerHTML ="";
     if(snapshot.exists()){
         let itemsArray = Object.entries(snapshot.val());
         let itemHistory = itemsArray[0];
@@ -59,4 +68,3 @@ function appendTransactions(history){
         }
     }
 }
-

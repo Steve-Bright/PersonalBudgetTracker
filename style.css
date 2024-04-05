@@ -38,17 +38,15 @@
 }
 
 #floatingActionButton{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     border: 3px solid black;
     position: fixed;
-    top: 50%;
-    right: 0px;
+    bottom: 15%;
+    right: 10px;
     border-radius: 100px;
-    font-size: 2em;
-    font-weight: bolder;
-    text-align: center;
     background-color: yellow;
+    z-index: 100;
 }
 
 #totalDiv > div:nth-child(3){
