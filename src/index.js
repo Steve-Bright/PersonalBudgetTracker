@@ -14,19 +14,11 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app)
 const budgetList = ref(database, "BudgetList");
 
+const addButton = document.getElementById("floatingActionButton");
 const budget = document.getElementById("budgetValue");
 const transactions = document.getElementById("recentTransactions");
 //budget[0] is history transactions
 //budget[1] is total budget.
-
-function popUp(){
-    console.log("Clicked")
-    const popUp = document.getElementById("popUpDiv");
-    if(popUp.style.display === "none"){
-        popUp.style.display = "flex";
-    }
-}
-
 
 onValue(budgetList, function(snapshot){
     transactions.innerHTML ="";
@@ -68,3 +60,12 @@ function appendTransactions(history){
         }
     }
 }
+
+addButton.addEventListener("click", function(){
+        console.log("clicked?")
+        const popUp = document.getElementById("popUpDiv");
+        if(getComputedStyle(popUp).display == "none"){
+            popUp.style.display = "flex";
+        }
+    
+});
